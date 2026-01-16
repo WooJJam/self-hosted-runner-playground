@@ -1,0 +1,15 @@
+name: test
+ 
+on:
+  pull_request:
+    branches:
+      - "main"
+ 
+jobs:
+  print-hello:
+    runs-on: wojjam-macos-runner
+    steps:
+      - uses: actions/checkout@master
+ 
+      - name: Print
+        run: echo "Hello. This is WooJJam self-hosted-runner"
