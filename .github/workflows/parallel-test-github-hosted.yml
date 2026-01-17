@@ -1,0 +1,37 @@
+name: Parallel Test (GitHub-hosted)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Start Job 1
+        run: echo "Job 1 started at $(date)"
+
+      - name: Processing...
+        run: |
+          for i in {1..10}; do
+            echo "Job 1 - Step $i/10"
+            sleep 3
+          done
+
+      - name: Finish Job 1
+        run: echo "Job 1 finished at $(date)"
+
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Start Job 2
+        run: echo "Job 2 started at $(date)"
+
+      - name: Processing...
+        run: |
+          for i in {1..10}; do
+            echo "Job 2 - Step $i/10"
+            sleep 3
+          done
+
+      - name: Finish Job 2
+        run: echo "Job 2 finished at $(date)"
