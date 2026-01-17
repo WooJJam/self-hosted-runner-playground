@@ -5,6 +5,6 @@ on:
 
 jobs:
   test:
-    runs-on: [self-hosted, macOS, ARM64]
+    runs-on: wojjam-macos-runner
     steps:
       - run: echo "Hello from Self-hosted runner!"
