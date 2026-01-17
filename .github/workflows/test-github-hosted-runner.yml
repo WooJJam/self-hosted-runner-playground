@@ -1,0 +1,12 @@
+name: Test GitHub-hosted runner
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello from GitHub-hosted runner!"

@@ -1,0 +1,10 @@
+name: Test Self-hosted Runner
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: [self-hosted, macOS, ARM64]
+    steps:
+      - run: echo "Hello from Self-hosted runner!"
